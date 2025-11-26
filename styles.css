@@ -1,0 +1,51 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #2e57ff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+nav {
+    background: #eee;
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+}
