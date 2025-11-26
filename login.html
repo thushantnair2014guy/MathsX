@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MATHS X — Login</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="dark"> <!-- start dark by default -->
+  <main class="centered-card">
+    <div class="logo-wrap">
+      <img src="/mnt/data/file_000000003fb871f5aeb74c15d55eeb49" alt="MATHS X logo" class="brand-logo">
+    </div>
+
+    <h1 class="big-title">Welcome to MATHS X</h1>
+    <p class="muted">Enter a username to join the Math Warriors.</p>
+
+    <input id="username" class="input" placeholder="Your warrior name" />
+    <div class="row">
+      <button id="loginBtn" class="btn primary">Enter Arena</button>
+      <button id="darkToggle" class="btn outline">Toggle Dark</button>
+    </div>
+
+    <p class="muted small">This is a demo login (local-only). Passwords are not stored.</p>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    // login page bindings
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      const u = document.getElementById('username').value.trim();
+      if (!u) return alert('Choose a cool warrior name!');
+      localStorage.setItem('mx_user', u);
+      // default theme saved in main.js
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('darkToggle').addEventListener('click', () => {
+      toggleTheme();
+    });
+
+    // quick UX: allow Enter key
+    document.getElementById('username').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('loginBtn').click();
+    });
+  </script>
+</body>
+</html>
